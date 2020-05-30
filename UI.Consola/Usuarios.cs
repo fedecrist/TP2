@@ -12,6 +12,10 @@ namespace UI.Consola
     public class Usuarios
     {
         Business.Logic.UsuarioLogic UsuarioNegocio { get; set; }
+        public Usuarios()
+        {
+            this.UsuarioNegocio = new Business.Logic.UsuarioLogic();
+        }
 
         public void Menu()
         {
@@ -39,6 +43,7 @@ namespace UI.Consola
                             Eliminar(); break;
                     case 6: break;
                 }
+                WriteLine("Presione una tecla para continuar"); ReadKey();
                 Clear();
             }
 
